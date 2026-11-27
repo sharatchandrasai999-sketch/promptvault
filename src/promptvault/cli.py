@@ -62,7 +62,7 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _store_from(args: argparse.Namespace) -> "object":
+def _store_from(args: argparse.Namespace) -> object:
     # A --store given after the subcommand wins over one given before it.
     return resolve_store(getattr(args, "store", None))
 
