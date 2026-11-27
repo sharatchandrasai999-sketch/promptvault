@@ -35,7 +35,7 @@ promptvault list --name greet
 
 # A/B test two versions over a JSON test set:
 # [{"input": "hello", "expected": "HELLO"}, ...]
-promptvault ab --name greet --v1 1 --v2 2 --testset testset.json
+promptvault ab --name greet --v1 1 --v2 2 --testset examples/testset.json
 ```
 
 ## Example output
@@ -47,7 +47,7 @@ $ promptvault save --name greet --text "Reply normally."
 Saved 'greet' version 2
 $ promptvault list
 greet: 2 version(s)
-$ promptvault ab --name greet --v1 1 --v2 2 --testset testset.json
+$ promptvault ab --name greet --v1 1 --v2 2 --testset examples/testset.json
 v1: accuracy 100% (3/3), mean latency 0.002 ms
 v2: accuracy 0% (0/3), mean latency 0.001 ms
 Winner: v1 (higher accuracy, tie-break: lower latency)
